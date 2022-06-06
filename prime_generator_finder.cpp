@@ -8,7 +8,6 @@ int main()
 {
 
     int prime {0};
-    int exponent {0};
     int generator_count {0};
     
     std::cout << "Enter the prime p: " << std::endl;
@@ -22,7 +21,8 @@ int main()
     //                                                        for any natural number a
     for(int generator {2}; generator < (prime-1); ++generator)
     {
-        
+        int exponent {0};
+	    
 	for(exponent = 2; exponent < (prime - 1); ++exponent)
         {
             int intermediate_value = pow(generator,exponent);
@@ -35,9 +35,7 @@ int main()
         
 	//if we did not break out from the previous loop, it means that we found a generator
         if(exponent == (prime - 1))
-	{
 		std::cout << ++generator_count << ": -> " << generator << std::endl;
-	}
     }
     std::cout << "\nFound " << generator_count << " generators" << std::endl;
 	
