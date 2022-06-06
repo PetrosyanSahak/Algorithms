@@ -8,7 +8,6 @@ int main()
 {
 
     int prime {0};
-    int generator {0};
     int exponent {0};
     int generator_count {0};
     
@@ -21,18 +20,16 @@ int main()
     //Note that we do not test (prime-1) because Fermat's Law states that
     //		                                                          a**(prime-1) = 1 (mod prime)
     //                                                        for any natural number a
-    for(generator = 2; generator < (prime-1); generator++)
+    for(int generator {2}; generator < (prime-1); ++generator)
     {
-	//Maybe this assignment doesnot change anything, I am not sure!?
-        exponent = 2;
         
-	for(exponent = 2; exponent < (prime - 1); exponent++)
+	for(exponent = 2; exponent < (prime - 1); ++exponent)
         {
             int intermediate_value = pow(generator,exponent);
             //
 	    //if the residue is 1, means we have cycle, but because generator is less than (prime-1)
 	    //this number cannot be generator, thus we break from this loop, and test the remaining values
-            if(intermadiate_value % prime == 1)
+            if(intermediate_value % prime == 1)
                 break;
         }
         
