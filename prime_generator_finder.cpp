@@ -24,14 +24,11 @@ int main()
         int exponent {0};
 	    
 	for(exponent = 2; exponent < (prime - 1); ++exponent)
-        {
-            int intermediate_value = pow(generator,exponent);
             //
 	    //if the residue is 1, means we have cycle, but because generator is less than (prime-1)
 	    //this number cannot be generator, thus we break from this loop, and test the remaining values
-            if(intermediate_value % prime == 1)
+            if( pow(generator,exponent) % prime == 1)
                 break;
-        }
         
 	//if we did not break out from the previous loop, it means that we found a generator
         if(exponent == (prime - 1))
