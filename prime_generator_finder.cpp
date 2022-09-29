@@ -23,7 +23,7 @@ int main()
     {
         int exponent {0};
 	    
-	for(exponent = 2; exponent < (prime - 1); ++exponent)
+	for(exponent {2}; exponent < (prime - 1); ++exponent)
             //
 	    //if the residue is 1, means we have cycle, but because generator is less than (prime-1)
 	    //this number cannot be generator, thus we break from this loop, and test the remaining values
