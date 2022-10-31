@@ -20,12 +20,7 @@ int gcd(int a, int b)
 	{
 		int tmp1 {0};
 		int r {0};
-		if (a < b)
-		{
-			tmp1 = a;
-			a = b;
-			b = tmp1;
-		}
+		
 		r = a % b;
 		
 		while(r != 0)
