@@ -7,8 +7,8 @@ int main() {
 	int b = 0;
 	
 	printf("%s", "Enter 2 number` a and b, to get the gcd(a,b): \n");
-  scanf("%d%d", &a, &b);
-	printf("%d" gcd(a,b));
+        scanf("%d%d", &a, &b);
+	printf("%d", gcd(a,b));
 	
 	return 0;
 }
