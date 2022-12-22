@@ -16,19 +16,13 @@ int main()
 
 int gcd(int a, int b)
 {
-	if (a != b)
+	int r {a % b};
+		
+	while(r != 0)
 	{
-		int tmp1 {0};
-		int r {0};
-		
+		a = b;
+		b = r;
 		r = a % b;
-		
-		while(r != 0)
-		{
-			a = b;
-			b = r;
-			r = a % b;
-		}
 	}
 	return b;
 }
